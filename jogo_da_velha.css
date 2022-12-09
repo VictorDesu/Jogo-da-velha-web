@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+}
+
+#body{
+    margin: 0;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./cenario2.jpg);
+    background-color: #2d2d2d;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    visibility: visible;
+}
+
+/*Jogo da velha*/
+#grade{
+    place-self: center;
+    display: inline-grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+}
+
+#grade button {
+	font-size: 50pt;
+}
+
+.Q{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 3px solid orangered;
+    color: white;
+    background-color: transparent;
+}
+
+#bt_0_0, #bt_1_0, #bt_2_0{
+    border-top: none;
+    border-left: none;
+}
+
+#bt_0_1, #bt_1_1, #bt_2_1{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#bt_0_2, #bt_1_2, #bt_2_2{
+    border-top: none;
+    border-right: none;
+}
+
+#bt_2_0, #bt_2_1, #bt_2_2{
+    border-bottom: none;
+}
+
+#vez{
+    position: absolute;
+    left: 46vw;
+    top: 10vh;
+    font-size: 300%;
+    animation: float 2s ease-in-out infinite;
+    color: rgb(241, 109, 56);
+}
+
+/*Sistema de player*/
+#P1, #P2{
+    height: 40vh;
+    width: 40vh;
+    top: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+#P1{
+    left: 7vw;
+    background-image: url(./personagem1.gif);
+    transform: rotateY(180deg);
+}
+
+#P2{
+    right: 7vw;
+    background-image: url(./personagem2.gif);
+}
+
+#V1, #V2{
+    position: absolute;
+    top: 30vh;
+    font-size: 300%;
+    animation: float 3s ease-in-out infinite;
+}
+
+#V1{
+    left: 10vw;
+    color: rgb(0, 119, 255);
+}
+
+#V2{
+    right: 10vw;
+    color: rgb(219, 64, 64);
+}
+
+#Ve{
+    left: 43vw;
+    bottom: 2vh;
+    position: absolute;
+    font-size: 300%;
+    animation: float 3s ease-in-out infinite;
+}
+
+/*animações*/
+@keyframes float{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(-15px);}
+    100%{transform: translateY(0);}
+}
